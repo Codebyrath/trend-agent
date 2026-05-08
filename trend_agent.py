@@ -17,7 +17,7 @@ TOP_N           = int(os.environ.get("TOP_N", "10"))
 TIMEFRAME       = os.environ.get("TIMEFRAME", "now 7-d")    # now 1-d or now 7-d
 
 # ── PYTRENDS SETUP ────────────────────────────────────────────────────────────
-pytrends = TrendReq(hl="en-US", tz=60, timeout=(10, 25), retries=2, backoff_factor=0.5)
+pytrends = TrendReq(hl="en-US", tz=60, timeout=(10, 25))
 
 def get_trending_searches(geo: str = "united_states") -> list[str]:
     """Daily trending searches (real-time)."""
